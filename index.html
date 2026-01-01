@@ -149,6 +149,56 @@
             color: #cccccc;
         }
 
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            transition: transform 0.3s, border-color 0.3s;
+            aspect-ratio: 1;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            border-color: #00d4ff;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+            padding: 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-overlay p {
+            color: #00d4ff;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
         .contact-form {
             max-width: 600px;
             margin: 0 auto;
@@ -247,6 +297,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -274,6 +325,74 @@
                 <h3>Business Solutions</h3>
                 <p>Professional engraving services for business needs including signage, branded merchandise, awards, and promotional items.</p>
             </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <h2>Our Work</h2>
+        <div class="gallery-grid">
+            <!-- ACTIVE GALLERY ITEMS - Replace image URLs with your actual product photos -->
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x400/2d3561/00d4ff?text=Product+1" alt="Engraved Product 1">
+                <div class="gallery-overlay">
+                    <p>Custom Engraved Gift</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x400/2d3561/00d4ff?text=Product+2" alt="Engraved Product 2">
+                <div class="gallery-overlay">
+                    <p>Wooden Wall Art</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x400/2d3561/00d4ff?text=Product+3" alt="Engraved Product 3">
+                <div class="gallery-overlay">
+                    <p>Business Signage</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x400/2d3561/00d4ff?text=Product+4" alt="Engraved Product 4">
+                <div class="gallery-overlay">
+                    <p>Personalized Keychain</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x400/2d3561/00d4ff?text=Product+5" alt="Engraved Product 5">
+                <div class="gallery-overlay">
+                    <p>Decorative Plaque</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x400/2d3561/00d4ff?text=Product+6" alt="Engraved Product 6">
+                <div class="gallery-overlay">
+                    <p>Custom Award</p>
+                </div>
+            </div>
+
+            <!-- COMMENTED OUT SECTION - Copy and paste the template below to add more products -->
+            <!-- 
+            <div class="gallery-item">
+                <img src="YOUR_IMAGE_URL_HERE.jpg" alt="Description of product">
+                <div class="gallery-overlay">
+                    <p>Product Name Here</p>
+                </div>
+            </div>
+            -->
+
+            <!-- EXAMPLE: Add more items by uncommenting and editing:
+            <div class="gallery-item">
+                <img src="images/product7.jpg" alt="Engraved Product 7">
+                <div class="gallery-overlay">
+                    <p>Your Product Name</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/product8.jpg" alt="Engraved Product 8">
+                <div class="gallery-overlay">
+                    <p>Your Product Name</p>
+                </div>
+            </div>
+            -->
         </div>
     </section>
 
